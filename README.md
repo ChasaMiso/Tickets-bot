@@ -28,5 +28,5 @@ MONGO_DATABASE_NAME=YOUR DATABASE NAME
 ## Running
 
 * Firstly install all the dependencies `npm i`.
-* Run `npm run dev`to build and run automatically.
+* Run `npm run dev` to build and run automatically.
 * To build only `npm run build` | To run only `npm run start`.
