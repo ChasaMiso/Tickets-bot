@@ -1,14 +1,18 @@
-<h1 style="text-align:center;">Discord.js v14 Bot Template</h1>
+<h1 style="text-align:center;">Discord.js v14 Tickets bot</h1>
+
+## WARNING
+The bot is still in earling development, its features aren`t fully done yet and there are more to come.
 
 ## Features
 
-* 🟦 Typescript
-* 🔥 Slash commands (supports auto complete!)
-* ✉️ Message commands
-* 🕛 Cooldowns
-* 🏴 Detailed Permissions
-* 💪 Event & Command handlers
-* 🍃 MongoDB Support
+* ❓ Ticket Channels
+* 🔥 Slash commands and prefix commmands
+* ✉️ Saved Info on the DB
+* 💪 Dm for custom version
+
+## Future features
+* 🔥 Dashboard
+* 👏 More commands
 
 ## Installation
 
@@ -21,5 +25,8 @@ PREFIX=!
 MONGO_URI=YOUR MONGO CONNECTION STRING
 MONGO_DATABASE_NAME=YOUR DATABASE NAME
 ```
+## Running
 
-Build the project using the typescript module and start the bot using the `npm start` command
+* Firstly install all the dependencies `npm i`.
+* Run `npm run dev`to build and run automatically.
+* To build only `npm run build` | To run only `npm run start`.
