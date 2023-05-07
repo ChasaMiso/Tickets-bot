@@ -3,6 +3,9 @@
 ## WARNING
 The bot is still in earling development, its features aren`t fully done yet and there are more to come.
 
+## Changelog
+* Changed the blacklist system, it will now work for every server without additional configuration.
+
 ## Features
 
 * ❓ Ticket Channels
@@ -15,7 +18,7 @@ The bot is still in earling development, its features aren`t fully done yet and 
 * 👏 More commands
 
 ## Available commands
-* Blacklist - blacklists a user from using tickets(Yet to implementate a newer way)
+* Blacklist - blacklists a user from using tickets(New implementation)
 * Close - closes the current ticket
 * Panel - Sends an embed to open a ticket
 
