@@ -33,6 +33,11 @@ export interface ITicket extends mongoose.Document {
     createdAt: Date
 }
 
+export interface IBlacklistedUser extends mongoose.Document {
+    guildID: string,
+    userID: string
+}
+
 export type GuildOption = keyof GuildOptions
 export interface BotEvent {
     name: string,
