@@ -2,6 +2,7 @@ import { Embed, EmbedBuilder, Interaction, embedLength } from "discord.js";
 import { BotEvent } from "../types";
 import {TicketManager} from "../modules/manager"
 import {client} from "../index"
+import BlacklistedUserModel from "../schemas/BlacklistedUser";
 
 const event : BotEvent = {
     name: "interactionCreate",
@@ -40,9 +41,19 @@ const event : BotEvent = {
             console.log("button")
             console.log(interaction.component.label)
             if(interaction.component.label=="Help"){
-                console.log("tasdasd")
-                const tm = new TicketManager(client)
-                tm.create(interaction.guildId, interaction.user.id, "1104336175864500304")
+                BlacklistedUserModel.find({userID: interaction.user.id}, function(err:any, obj:any) {   
+                    try{
+                        if(obj[0]?.userID == interaction.user.id){
+                            return interaction.user.send('**You are blacklisted from making tickets!**')
+                        }else{
+                            console.log("tasdasd")
+                            const tm = new TicketManager(client)
+                            tm.create(interaction.guildId, interaction.user.id, "1104336175864500304")
+                        }
+                    } catch(err){
+                        console.log(err)
+                    }
+                })
             } else if(interaction.component.label=="Claim"){
                 const embed = new EmbedBuilder()
                 .setTitle(`This ticket was claimed.`)
