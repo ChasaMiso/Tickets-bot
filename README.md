@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">Discord.js v14 Tickets bot</h1>
+<h1 style="text-align:center;">Tickets bot V1.2</h1>
 
 ## WARNING
 The bot is still in earling development, its features aren`t fully done yet and there are more to come.
